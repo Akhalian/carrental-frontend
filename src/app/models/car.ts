@@ -5,6 +5,6 @@ export interface Car{
     dailyPrice:number;
     modelYear:number;
     description:string;
-    carImageDate:Date;
+    carImageDate:string;
     imagePath:string;
 }
