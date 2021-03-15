@@ -4,7 +4,7 @@
 </div>
 <div class="row" *ngIf="dataLoaded==true">
   <div *ngFor="let car of cars" class="card" style="width: 20rem;">
-    <img src="{{car.imagePath}}" class="card-img-top" alt="...">
+    <img src="{{imageBasePath}}/{{car.imagePath}}" class="card-img-top" alt="{{car.description}} Image" width="auto" height="auto">
     <div  class="card-body">
       <h5 class="card-title">{{car.description}}</h5>
     </div >
@@ -15,8 +15,12 @@
       <li class="list-group-item">Fiyat: {{car.dailyPrice}} Türk Lirası</li>
     </ul>
     <div class="card-body">
-      <button routerLink="/cars/details/{{car.carId}}" type="button" class="btn btn-light">Detaylar</button>
-      <button type="button" class="btn btn-light">Kirala</button>
+      <section style="float:left">
+        <button routerLink="/car/details/{{car.carId}}" type="button" class="btn btn-primary">Detaylar</button>
+      </section>
+      <section style="float: right">
+        <button type="button" class="btn btn-primary">Kirala</button>
+      </section>
     </div>
   </div>
 </div>
