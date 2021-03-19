@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment';
 export class CarComponent implements OnInit {
   cars: Car[] = [];
   dataLoaded = false;
+  filterText="";
   imageBasePath = environment.baseUrl
 
   constructor(private carService: CarService, private activatedRoute:ActivatedRoute) {}
