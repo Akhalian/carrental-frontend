@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Car } from 'src/app/models/car';
+import { CarDetail } from 'src/app/models/car-detail';
 import { CarService } from 'src/app/services/car.service';
 import { environment } from 'src/environments/environment';
 
@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./car.component.css'],
 })
 export class CarComponent implements OnInit {
-  cars: Car[] = [];
+  carDetails: CarDetail[] = [];
   dataLoaded = false;
   filterText="";
   imageBasePath = environment.baseUrl
@@ -32,7 +32,7 @@ export class CarComponent implements OnInit {
 
   getCars() {
     this.carService.getCars().subscribe((response) => {
-      this.cars = response.data;
+      this.carDetails = response.data;
       console.log(response)
       this.dataLoaded = true;
     });
@@ -40,14 +40,14 @@ export class CarComponent implements OnInit {
 
   getCarsByBrand(brandId:number) {
     this.carService.getCarsByBrand(brandId).subscribe((response) => {
-      this.cars = response.data;
+      this.carDetails = response.data;
       this.dataLoaded = true;
     });
   }
 
   getCarsByColor(brandId:number) {
     this.carService.getCarsByColor(brandId).subscribe((response) => {
-      this.cars = response.data;
+      this.carDetails = response.data;
       this.dataLoaded = true;
     });
   }

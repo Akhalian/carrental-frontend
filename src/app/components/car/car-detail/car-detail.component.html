@@ -53,9 +53,8 @@
       <td>{{carDetail.brandName}}</td>
       <td>{{carDetail.colorName}}</td>
       <td>{{carDetail.modelYear}}</td>
-      <td>{{carDetail.dailyPrice}}</td>
+      <td>{{carDetail.dailyPrice | currency: "TRY":"symbol-narrow":"1.2-2"}}</td>
       <td>{{carDetail.description}}</td>
-      
   </tr>
   </table>
   
