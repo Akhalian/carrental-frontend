@@ -20,6 +20,7 @@ export class RentalComponent implements OnInit {
   rental: Rental;
   rentable: Boolean = false;
   imageBasePath = environment.baseUrl;
+  @Input() cars:CarDetail
 
   constructor(
     private rentalService: RentalService,

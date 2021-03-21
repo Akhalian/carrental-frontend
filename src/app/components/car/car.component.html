@@ -22,12 +22,28 @@
         <li class="list-group-item">Fiyat: {{cardetail.dailyPrice | currency: "TRY":"symbol-narrow":"1.2-2"}} </li>
       </ul>
       <div class="card-body">
-        <section style="float:left">
+        <section class="d-grid gap">
           <button routerLink="/car/details/{{cardetail.carId}}" type="button" class="btn btn-primary">Detaylar</button>
         </section>
-        <section style="float: right">
-          <button routerLink="/rental/{{cardetail.carId}}" type="button" class="btn btn-primary">Kirala</button>
-        </section>
+        <!-- <section style="float: right">
+          <button data-bs-toggle="modal" data-bs-target="#rentalModal" type="button" class="btn btn-primary" >Kirala</button>
+      <div class="modal fade" id="rentalModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Kirala</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <app-rental [cars]="cardetail"></app-rental>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        </section> -->
       </div>
     </div>
   </div>

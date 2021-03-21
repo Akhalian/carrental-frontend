@@ -11,6 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class CarComponent implements OnInit {
   carDetails: CarDetail[] = [];
+  carDetail:CarDetail;
   dataLoaded = false;
   filterText="";
   imageBasePath = environment.baseUrl
